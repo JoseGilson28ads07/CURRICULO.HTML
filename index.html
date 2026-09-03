@@ -5,19 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículo - José Gilson Cavalcante Filho</title>
+
+  <!-- Conecta com o Google Fonts para usar as fontes "Space Grotesk" (títulos) e "Inter" (textos) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
+
     :root {
-      --bg: #EDEFEE;
-      --paper: #FFFFFF;
-      --ink: #1B2430;
-      --ink-soft: #4B5563;
-      --accent: #1D3557;
-      --accent-soft: #E4E9F0;
-      --line: #D7DCE1;
+      --bg: #EDEFEE;          
+      --paper: #FFFFFF;      
+      --ink: #1B2430;        
+      --ink-soft: #4B5563;    
+      --accent: #1D3557;      
+      --accent-soft: #E4E9F0; 
+      --line: #D7DCE1;        
     }
 
+    
     * { box-sizing: border-box; }
 
     body {
@@ -25,19 +30,20 @@
       background: var(--bg);
       color: var(--ink);
       font-family: 'Inter', sans-serif;
-      line-height: 1.5;
+      line-height: 1.5; 
     }
 
+    
     .folha {
       max-width: 880px;
       margin: 40px auto;
       background: var(--paper);
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      display: grid;                     /* usa CSS Grid para dividir em colunas */
+      grid-template-columns: 260px 1fr;  
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08); /
     }
 
-    /* Coluna lateral */
+    
     .lateral {
       background: var(--accent);
       color: #fff;
@@ -47,10 +53,10 @@
     .lateral .foto-perfil {
       width: 110px;
       height: 110px;
-      border-radius: 50%;
-      object-fit: cover;
+      border-radius: 50%;   /* deixa a imagem redonda */
+      object-fit: cover;    
       display: block;
-      margin: 0 auto 20px;
+      margin: 0 auto 20px;  
       border: 3px solid rgba(255,255,255,0.35);
     }
 
@@ -69,31 +75,32 @@
       margin: 0 0 32px;
     }
 
+    /* Título de cada bloco dentro da lateral: "Contato", "Habilidades" */
     .lateral h2 {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 0.95rem;
-      border-bottom: 1px solid rgba(255,255,255,0.25);
+      border-bottom: 1px solid rgba(255,255,255,0.25); 
       padding-bottom: 6px;
       margin: 28px 0 12px;
     }
 
     .lateral ul {
-      list-style: none;
+      list-style: none; 
       padding: 0;
       margin: 0;
       font-size: 0.88rem;
     }
 
-    .lateral li { margin-bottom: 8px; word-break: break-word; }
+    .lateral li { margin-bottom: 8px; word-break: break-word; } 
 
     .lateral a { color: #C9D6E8; text-decoration: none; }
-    .lateral a:hover { text-decoration: underline; }
+    .lateral a:hover { text-decoration: underline; } 
 
-    /* Coluna principal */
+    
     .principal { padding: 44px 40px; }
 
-    .principal section { margin-bottom: 32px; }
-    .principal section:last-child { margin-bottom: 0; }
+    .principal section { margin-bottom: 32px; }        
+    .principal section:last-child { margin-bottom: 0; } 
 
     .principal h2 {
       font-family: 'Space Grotesk', sans-serif;
@@ -101,13 +108,13 @@
       color: var(--accent);
       margin: 0 0 14px;
       padding-bottom: 8px;
-      border-bottom: 2px solid var(--accent-soft);
+      border-bottom: 2px solid var(--accent-soft); 
     }
 
     .resumo p {
       margin: 0;
       color: var(--ink-soft);
-      max-width: 60ch;
+      max-width: 60ch; 
     }
 
     .item {
@@ -146,14 +153,14 @@
 <body>
   <div class="folha">
 
-    <!-- COLUNA LATERAL -->
+    <!-- ===== COLUNA LATERAL ===== -->
     <aside class="lateral">
-      <!-- Troque "foto.jpg" pelo caminho da sua foto dentro da mesma pasta do arquivo HTML.
-           Um caminho local do tipo C:/Users/... só funciona no seu próprio computador. -->
-           <img src="../IMAGENS/foto.jpg" alt="Foto de José Gilson Cavalcante Filho" class="foto-perfil">
+      <!-- A foto precisa estar dentro da pasta IMAGENS, na mesma pasta do index.html -->
+      <img src="IMAGENS/IMG_20251231_224533_727.webp" alt="Foto de José Gilson Cavalcante Filho" class="foto-perfil">
       <h1>José Gilson Cavalcante Filho</h1>
       <p class="cargo">Desenvolvedor Web Front-end</p>
 
+      <!-- Bloco de contato: telefone, e-mail e redes -->
       <h2>Contato</h2>
       <ul>
         <li>(43) 99966-4782</li>
@@ -162,6 +169,7 @@
         <li><a href="#">github.com/seu-perfil</a></li>
       </ul>
 
+      <!-- Bloco de habilidades técnicas -->
       <h2>Habilidades</h2>
       <ul>
         <li>JavaScript</li>
@@ -170,9 +178,9 @@
       </ul>
     </aside>
 
-    <!-- COLUNA PRINCIPAL -->
     <main class="principal">
 
+      <!-- Resumo profissional / objetivo -->
       <section class="resumo">
         <h2>Resumo</h2>
         <p>
@@ -187,6 +195,7 @@
         </p>
       </section>
 
+      <!-- Experiência profissional: um .item para cada emprego -->
       <section class="experiencia">
         <h2>Experiência</h2>
         <div class="item">
@@ -198,6 +207,7 @@
         </div>
       </section>
 
+      <!-- Formação acadêmica: um .item para cada curso -->
       <section class="educacao">
         <h2>Educação</h2>
         <div class="item">
