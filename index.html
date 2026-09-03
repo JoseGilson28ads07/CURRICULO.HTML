@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo - José Gilson Cavalcante Filho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #EDEFEE;
+      --paper: #FFFFFF;
+      --ink: #1B2430;
+      --ink-soft: #4B5563;
+      --accent: #1D3557;
+      --accent-soft: #E4E9F0;
+      --line: #D7DCE1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+    }
+
+    .folha {
+      max-width: 880px;
+      margin: 40px auto;
+      background: var(--paper);
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    /* Coluna lateral */
+    .lateral {
+      background: var(--accent);
+      color: #fff;
+      padding: 40px 28px;
+    }
+
+    .lateral .foto-perfil {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 20px;
+      border: 3px solid rgba(255,255,255,0.35);
+    }
+
+    .lateral h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.3rem;
+      text-align: center;
+      margin: 0 0 4px;
+      line-height: 1.25;
+    }
+
+    .lateral .cargo {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #C9D6E8;
+      margin: 0 0 32px;
+    }
+
+    .lateral h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      border-bottom: 1px solid rgba(255,255,255,0.25);
+      padding-bottom: 6px;
+      margin: 28px 0 12px;
+    }
+
+    .lateral ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.88rem;
+    }
+
+    .lateral li { margin-bottom: 8px; word-break: break-word; }
+
+    .lateral a { color: #C9D6E8; text-decoration: none; }
+    .lateral a:hover { text-decoration: underline; }
+
+    /* Coluna principal */
+    .principal { padding: 44px 40px; }
+
+    .principal section { margin-bottom: 32px; }
+    .principal section:last-child { margin-bottom: 0; }
+
+    .principal h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      color: var(--accent);
+      margin: 0 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent-soft);
+    }
+
+    .resumo p {
+      margin: 0;
+      color: var(--ink-soft);
+      max-width: 60ch;
+    }
+
+    .item {
+      margin-bottom: 20px;
+    }
+    .item:last-child { margin-bottom: 0; }
+
+    .item h3 {
+      font-size: 0.98rem;
+      margin: 0 0 2px;
+      color: var(--ink);
+    }
+
+    .item .periodo {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      margin: 0 0 8px;
+    }
+
+    .item ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--ink-soft);
+      font-size: 0.92rem;
+    }
+
+    .item ul li { margin-bottom: 4px; }
+
+    @media (max-width: 680px) {
+      .folha { grid-template-columns: 1fr; margin: 0; }
+      .principal { padding: 32px 24px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="folha">
+
+    <!-- COLUNA LATERAL -->
+    <aside class="lateral">
+      <!-- Troque "foto.jpg" pelo caminho da sua foto dentro da mesma pasta do arquivo HTML.
+           Um caminho local do tipo C:/Users/... só funciona no seu próprio computador. -->
+           <img src="../IMAGENS/foto.jpg" alt="Foto de José Gilson Cavalcante Filho" class="foto-perfil">
+      <h1>José Gilson Cavalcante Filho</h1>
+      <p class="cargo">Desenvolvedor Web Front-end</p>
+
+      <h2>Contato</h2>
+      <ul>
+        <li>(43) 99966-4782</li>
+        <li>josegilson40250@gmail.com</li>
+        <li><a href="#">linkedin.com/in/seu-perfil</a></li>
+        <li><a href="#">github.com/seu-perfil</a></li>
+      </ul>
+
+      <h2>Habilidades</h2>
+      <ul>
+        <li>JavaScript</li>
+        <li>HTML5 &amp; CSS3</li>
+        <li>Git &amp; GitHub</li>
+      </ul>
+    </aside>
+
+    <!-- COLUNA PRINCIPAL -->
+    <main class="principal">
+
+      <section class="resumo">
+        <h2>Resumo</h2>
+        <p>
+          Estudante de Análise e Desenvolvimento de Sistemas, atualmente no 2º período, com
+          conhecimentos em lógica de programação e desenvolvimento de soluções em Java, HTML e
+          banco de dados. Experiência prática em disciplinas de algoritmos e estruturas de dados,
+          com projetos envolvendo estruturas de registro, manipulação de dados e lógica
+          computacional. Perfil proativo, com facilidade de aprendizado e interesse em aprofundar
+          conhecimentos em desenvolvimento de sistemas e boas práticas de programação. Busca
+          oportunidade de estágio para aplicar e expandir competências técnicas em ambiente
+          profissional.
+        </p>
+      </section>
+
+      <section class="experiencia">
+        <h2>Experiência</h2>
+        <div class="item">
+          <h3>Auxiliar de Produção — IGC</h3>
+          <p class="periodo">Fevereiro de 2023 – Outubro de 2023</p>
+          <ul>
+            <li>Responsável pela manutenção de produção e montagem de paletes.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="educacao">
+        <h2>Educação</h2>
+        <div class="item">
+          <h3>Análise e Desenvolvimento de Sistemas</h3>
+          <p class="periodo">Universidade Tecnológica Federal do Paraná (UTFPR) — Cursando</p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+
+</html>
